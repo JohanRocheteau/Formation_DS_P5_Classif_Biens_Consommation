@@ -49,4 +49,4 @@
     - **API Epicerie Fine :**
         - **L'API :** [Lien vers l'API](https://rapidapi.com/edamam/api/edamam-food-and-grocery-database)
         - **Extraction des informations sur le champagne :**
-          ![Champagne]()
+          ![Champagne](PhotosReadme/APIChampagne.png)
