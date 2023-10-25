@@ -30,10 +30,18 @@
         - **Types d'analyses NLP :** CountVectorizer, Tfidf, Word2Vec, BERT et USE
         - **Pour chaque type d'analyse j'ai réalisé :**
             - Une étude visuelle des groupes réels vs groupes crées en KMeans via TSNE pour avoir que deux variables et une matrice de confusion pour observer la pertinance des prédictions :
+         
+              ![GraphsNLP](PhotosReadme/GraphiquesNLP.png)
             - Une étude en Machine Learning via différents modèles pour déterminer si une classification des produits est réalisable via NLP :
+         
+              ![MLNLP](PhotosReadme/MLNLP.png)
          
     - **Images :**
         - **Types d'analyse d'images :** SIFT et CNN transfert learning
         - **Pour chaque type d'analyse j'ai réalisé :**
             - Une étude visuelle des groupes réels vs groupes crées en KMeans via TSNE pour avoir que deux variables et une matrice de confusion pour observer la pertinance des prédictions :
+              
+              ![GraphsImages](PhotosReadme/GraphiquesImages.png)
             - Une étude en Machine Learning via différents modèles pour déterminer si une classification des produits est réalisable via extractions des features depuis des images :
+         
+              ![MLImages](PhotosReadme/MLImages.png)
