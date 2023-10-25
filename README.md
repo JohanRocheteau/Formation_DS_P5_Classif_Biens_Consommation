@@ -14,7 +14,7 @@
     - Etudier la faisabilité de récupérer les informations de différents produits de consommation via une API.
 
 ## Réalisations :
-- **Librairies principales :** Wordcloud, PIL, seaborn, différents modèles de ML
+- **Librairies principales :** Wordcloud, PIL, seaborn, différents modèles de ML, requests, json
 - **Etapes réalisées :**
     - **Prétraitements :**
         - Ouverture des données et analyse du remplissage de la DataFrame
@@ -45,3 +45,8 @@
             - Une étude en Machine Learning via différents modèles pour déterminer si une classification des produits est réalisable via extractions des features depuis des images :
          
               ![MLImages](PhotosReadme/MLImages.png)
+
+    - **API Epicerie Fine :**
+        - **L'API :** [Lien vers l'API](https://rapidapi.com/edamam/api/edamam-food-and-grocery-database)
+        - **Extraction des informations sur le champagne :**
+          ![Champagne]()
