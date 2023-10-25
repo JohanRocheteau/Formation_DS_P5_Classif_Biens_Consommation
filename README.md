@@ -23,6 +23,17 @@
             - Etude du nombre de mots dans la totalité de la DataFrame :
          
             ![TopFlop](PhotosReadme/TopFlopWords.png)
-            - Visualisaation des mots en fonction de leur fréquence :
+            - Visualisation des mots en fonction de leur fréquence :
          
               ![Nuage](PhotosReadme/nuages.png)
+    - **NLP :**
+        - **Types d'analyses NLP :** CountVectorizer, Tfidf, Word2Vec, BERT et USE
+        - **Pour chaque type d'analyse j'ai réalisé :**
+            - Une étude visuelle des groupes réels vs groupes crées en KMeans via TSNE pour avoir que deux variables et une matrice de confusion pour observer la pertinance des prédictions :
+            - Une étude en Machine Learning via différents modèles pour déterminer si une classification des produits est réalisable via NLP :
+         
+    - **Images :**
+        - **Types d'analyse d'images :** SIFT et CNN transfert learning
+        - **Pour chaque type d'analyse j'ai réalisé :**
+            - Une étude visuelle des groupes réels vs groupes crées en KMeans via TSNE pour avoir que deux variables et une matrice de confusion pour observer la pertinance des prédictions :
+            - Une étude en Machine Learning via différents modèles pour déterminer si une classification des produits est réalisable via extractions des features depuis des images :
