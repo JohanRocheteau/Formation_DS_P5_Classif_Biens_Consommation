@@ -2,7 +2,7 @@
 
 ## Mise en situation :
 - **Entreprise :** Place de marché
-- **Logo :**
+- **Logo :** ![Logo](PhotosReadme/LogoP5.png)
 - **Activité :**  marketplace e-commerce
 - **But :** Attribuer automatiquement des noms de catégorie aux produits vendus par les clients (grâce aux photos ou aux descriptions)
 - **Jeux de données :** [Les Données](https://s3-eu-west-1.amazonaws.com/static.oc-static.com/prod/courses/files/Parcours_data_scientist/Projet+-+Textimage+DAS+V2/Dataset+projet+pre%CC%81traitement+textes+images.zip)
@@ -20,4 +20,9 @@
         - Ouverture des données et analyse du remplissage de la DataFrame
         - Etude de l'arbre de classification des produits (Les classifications se feront sur le niveau 1)
         - Nettoyage des données (Tokenisation, Suppression des stops words et ponctuations, Stemming/Lemmatizing) textuelles (Titres et descriptions) et visualisation :
-          
+            - Etude du nombre de mots dans la totalité de la DataFrame :
+         
+            ![TopFlop](PhotosReadme/TopFlopWords.png)
+            - Visualisaation des mots en fonction de leur fréquence :
+         
+              ![Nuage](PhotosReadme/nuages.png)
