@@ -1,88 +1,74 @@
-# 📊 Projet N°5 : Classifiez automatiquement des biens de consommation
+# Product-Classification-NLP-CV-2023
 
-## **📌 Contexte et Objectif**
+![Illustration](PhotosReadme/LogoP5.png)
 
-**Entreprise :** Place de marché  
-**Logo :** ![Logo](PhotosReadme/LogoP5.png)
+Projet réalisé en 2023 dans le cadre de ma formation en Data Science.  
+Objectif : classifier automatiquement des biens de consommation à partir de leurs **descriptions textuelles** et **images**, pour aider une place de marché à mieux organiser ses produits et automatiser le travail des vendeurs.
 
-### **🎯 Objectif**
-L'objectif est d'attribuer automatiquement des catégories aux produits vendus par les clients sur une plateforme e-commerce en utilisant leurs descriptions et images.
+## Objectifs
 
-### **📂 Jeux de données**
-- **Données :** [Les Données](https://s3-eu-west-1.amazonaws.com/static.oc-static.com/prod/courses/files/Parcours_data_scientist/Projet+-+Textimage+DAS+V2/Dataset+projet+pre%CC%81traitement+textes+images.zip)
-- **Missions du projet :**
-  - Automatiser l'attribution de catégories de produits, qui est actuellement effectuée manuellement par les vendeurs.
-  - Étudier la faisabilité d'un moteur de classification des produits basé sur les images et descriptions.
-  - Analyser la possibilité de récupérer des informations sur les produits via une API.
+- Automatiser l’attribution des catégories produits
+- Évaluer les performances de différents modèles basés sur le texte (NLP) et les images (Computer Vision)
+- Tester l’enrichissement via des APIs externes
 
----
+## Données
 
-## **🚀 Réalisations et Méthodologie**
+- **Source** : [Dataset produit](https://s3-eu-west-1.amazonaws.com/static.oc-static.com/prod/courses/files/Parcours_data_scientist/Projet+-+Textimage+DAS+V2/Dataset+projet+pre%CC%81traitement+textes+images.zip)
 
-### **1️⃣ Prétraitement des données**
-- **Ouverture des données :** Analyse du contenu et nettoyage de la DataFrame pour préparer les données pour le traitement.
-- **Nettoyage des données textuelles :** 
-  - Tokenisation, suppression des mots vides, ponctuation, stemming et lemmatisation.
-  
-  - **Visualisations :**
-    - Distribution du nombre de mots dans la DataFrame :
-    
-      ![TopFlop](PhotosReadme/TopFlopWords.png)
-    
-    - Nuage de mots pour visualiser les mots les plus fréquents :
-    
-      ![Nuage](PhotosReadme/nuages.png)
+Contenu :
+- Descriptions produits textuelles
+- Images produits
+- Catégories associées à prédire
 
-### **2️⃣ Analyse NLP (Traitement du langage naturel)**
-- **Techniques utilisées :** CountVectorizer, Tfidf, Word2Vec, BERT et USE.
-  
-- **Visualisation des résultats :** Pour chaque modèle NLP, une étude visuelle des groupes créés via **KMeans** avec **t-SNE** et une matrice de confusion pour observer la qualité de la classification.
-  
-  ![GraphsNLP](PhotosReadme/GraphiquesNLP.png)
-  
-- **Modèles de Machine Learning :** Application de plusieurs modèles pour tester la faisabilité de la classification via le NLP.
-  
-  ![MLNLP](PhotosReadme/MLNLP.png)
+## Méthodologie
 
-### **3️⃣ Analyse d'Images**
-- **Techniques utilisées :** SIFT et CNN (Transfert Learning).
-  
-- **Visualisation des groupes créés :** Comme pour le NLP, les résultats des groupes réels vs les groupes créés sont analysés via **KMeans** et **t-SNE**.
+### 1. Prétraitement des données
 
-  ![GraphsImages](PhotosReadme/GraphiquesImages.png)
-  
-- **Modèles de Machine Learning :** Utilisation de différents modèles pour tester la faisabilité de la classification via les images des produits.
+- Nettoyage des textes : tokenisation, stopwords, ponctuation, stemming, lemmatisation
+- Exploration de la longueur des textes  
+  ![Top mots](PhotosReadme/TopFlopWords.png)  
+  ![Word cloud](PhotosReadme/nuages.png)
 
-  ![MLImages](PhotosReadme/MLImages.png)
+### 2. Classification basée sur le texte (NLP)
 
-### **4️⃣ API Epicerie Fine**
-- **API utilisée :** [Edamam Food and Grocery Database](https://rapidapi.com/edamam/api/edamam-food-and-grocery-database)
-  
-- **Exemple d'extraction des informations sur un produit spécifique (champagne) :**
-  
-  ![Champagne](PhotosReadme/APIChampagne.png)
+- **Représentations utilisées** : CountVectorizer, TF-IDF, Word2Vec, BERT, USE
+- **Modèles de classification** : plusieurs algorithmes supervisés testés
+- **Visualisations** : t-SNE + KMeans + matrices de confusion  
+  ![Résultats NLP](PhotosReadme/GraphiquesNLP.png)  
+  ![Modèles NLP](PhotosReadme/MLNLP.png)
 
----
+### 3. Classification basée sur les images
 
-## **📈 Résultats et Insights**
+- **Techniques** : SIFT, CNN avec transfert learning
+- **Modèles évalués** via t-SNE, KMeans, matrices de confusion  
+  ![Résultats images](PhotosReadme/GraphiquesImages.png)  
+  ![Modèles CV](PhotosReadme/MLImages.png)
 
-- **Prédiction via NLP et Images :** Les résultats sont mitigés, avec certains modèles montrant des erreurs de classification dues à des limitations dans les données disponibles (manque de diversité dans les descriptions et images).
-- **API de données :** L'intégration de l'API permet de récupérer des informations externes utiles pour enrichir la classification des produits.
+### 4. Intégration d'une API externe
 
----
+- **API utilisée** : [Edamam – Food & Grocery](https://rapidapi.com/edamam/api/edamam-food-and-grocery-database)
+- **Objectif** : enrichir les prédictions avec des données externes
 
-## **🛠️ Technologies et Outils Utilisés**
+  Exemple de produit : champagne  
+  ![API champagne](PhotosReadme/APIChampagne.png)
 
-- **Langage :** Python 🐍
-- **Librairies :** Pandas, Seaborn, Matplotlib, Scikit-learn, Keras, TensorFlow, PIL, Numpy, requests
-- **Méthodes utilisées :** NLP, Machine Learning, Computer Vision (CNN, SIFT), Data Cleaning, API Integration
+## Résultats
 
----
+- **Performances mitigées**, en partie à cause du manque de diversité dans les données
+- La combinaison **texte + image** reste prometteuse pour une classification plus robuste
+- L’usage d’une **API externe** peut enrichir le modèle ou aider à la validation
 
-## **📬 Contact et Feedback**
+## Technologies utilisées
 
-💡 Ce projet a été réalisé dans le cadre de ma **formation Data Science**. N’hésitez pas à **laisser vos suggestions** ou à **me contacter** pour en discuter !  
+- **Langage** : Python
+- **Librairies** : pandas, seaborn, matplotlib, scikit-learn, Keras, TensorFlow, PIL, numpy, requests
+- **Approches** : NLP, Computer Vision, Clustering, Classification supervisée, API Integration
 
-📩 **Contact :**  
-📧 [johan.rocheteau@hotmail.fr](mailto:johan.rocheteau@hotmail.fr)  
-🔗 [LinkedIn](https://www.linkedin.com/in/johan-rocheteau)
+## Contact
+
+Projet réalisé en 2023 dans le cadre d’une formation en Data Science.  
+Pour toute remarque ou suggestion :
+
+- **Email** : [johan.rocheteau@hotmail.fr](mailto:johan.rocheteau@hotmail.fr)  
+- **LinkedIn** : [linkedin.com/in/johan-rocheteau](https://www.linkedin.com/in/johan-rocheteau)
+
